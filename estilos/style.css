@@ -159,7 +159,7 @@ article#video .video-container {
   justify-content: flex-start;
   gap: 40px;
   margin-top: 55px;
-  margin-bottom: 50px;
+  
 }
 
 .skill {
@@ -254,6 +254,23 @@ article#video .video-container {
   cursor: pointer;
 }
 
+.projeto-ver {
+  display: flex;
+  gap: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.projeto-ver a {
+  background-color: var(--destaque);
+  padding: 10px;
+  color: var(--texto-inverso);
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
 #projeto-container .foto {
   width: 100%;
   aspect-ratio: 16/9;
@@ -306,7 +323,15 @@ footer a {
 
   #projeto-container .foto {
     aspect-ratio: 1/1;
-    max-width: 20%;
+    max-width: 30%;
     max-height: 200px;
   }
+
+  .projeto-ver {
+    display: flex;
+    justify-content: flex-start;
+    
+  }
+
+  
 }
