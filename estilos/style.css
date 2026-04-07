@@ -15,7 +15,6 @@
   --fundo-card: #ffffff;            
 }
 
-
 body.escuro {
   --fundo-principal: #0f0c1a;     
   --texto: #e6e1f5;                 
@@ -43,14 +42,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-
 }
 
 #menu ul {
   list-style: none;
   display: flex;
   gap: 10px;
-
 }
 
 nav#menu a {
@@ -65,7 +62,6 @@ nav#menu a {
 nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
-  
 }
 
 main {
@@ -80,14 +76,12 @@ section#ficha {
   padding: 20px;
   border-radius: 8px;
   grid-column: 2;
-  
 }
 
 section#ficha img#foto {
   width: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
-  overflow: hidden;
   border-radius: 50%;
   border: 5px solid var(--fundo-card);
   outline: 5px solid var(--destaque);
@@ -114,7 +108,7 @@ div#social {
 
 div#social a {
   color: var(--destaque);
-  transition: color 0.5s
+  transition: color 0.5s;
 }
 
 div#social a:hover {
@@ -146,20 +140,15 @@ article#video .video-container {
 
 .video-container iframe {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 8px;
-
 }
 
 #skill-container {
   display: flex;
-  justify-content: flex-start;
   gap: 40px;
   margin-top: 55px;
-  
 }
 
 .skill {
@@ -185,12 +174,10 @@ article#video .video-container {
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 0.85rem;
-  white-space: nowrap;
   font-weight: 800;
-
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: 0.3s;
 }
 
 .skill:hover .tooltip {
@@ -209,25 +196,21 @@ article#video .video-container {
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
   padding-left: 15px;
-  transition: border-width 0.5s, border-color 0.5s;
+  transition: 0.5s;
 }
 
 #formacao-container .curso:hover {
   border-left-width: 15px;
   border-color: var(--destaque);
-  cursor: pointer;
 }
 
 #formacao-container .periodo {
-  font-size: 0.8em;
   font-weight: bold;
-  color: var(--texto);
-  font-size: 1.1em;;
+  font-size: 1.1em;
 }
 
 #formacao-container .instituicao {
   color: var(--destaque-inverso);
-  font-size: 1.1em;
 }
 
 #projeto-container {
@@ -235,6 +218,8 @@ article#video .video-container {
   flex-direction: column;
   gap: 20px;
 }
+
+/* ===== PROJETOS (CORRIGIDO) ===== */
 
 #projeto-container .projeto {
   display: flex;
@@ -244,21 +229,26 @@ article#video .video-container {
   padding: 10px;
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
-  transition: border-color 0.5s, border-width 0.5s;
-
+  transition: 0.5s;
 }
 
 #projeto-container .projeto:hover {
-  border-color: var(--destaque);
   border-left-width: 15px;
-  cursor: pointer;
+  border-color: var(--destaque);
+}
+
+#projeto-container .foto {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .projeto-ver {
   display: flex;
   gap: 40px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
   justify-content: center;
 }
 
@@ -271,13 +261,7 @@ article#video .video-container {
   font-weight: bold;
 }
 
-#projeto-container .foto {
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 8px;
-}
+/* ===== FOOTER ===== */
 
 footer {
   background-color: var(--destaque);
@@ -292,6 +276,8 @@ footer a {
   font-weight: bold;
 }
 
+/* ===== RESPONSIVO ===== */
+
 @media screen and (min-width: 768px) {
   main {
     grid-template-columns: auto 300px 1fr auto;
@@ -299,39 +285,32 @@ footer a {
 
   section#ficha {
     grid-column: 2 / 3;
-    height: fit-content;
     position: sticky;
     top: 65px;
   }
 
   section#detalhes {
-    grid-column: 3 / 4
-  }
-
-  #skill-container {
-    grid-template-columns: 1fr 1fr;
+    grid-column: 3 / 4;
   }
 
   #projeto-container .projeto {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  #projeto-container .projeto-info {
-    max-width: 80%;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 20px;
   }
 
   #projeto-container .foto {
-    aspect-ratio: 1/1;
-    max-width: 30%;
-    max-height: 200px;
+     width: 30%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  }
+
+  #projeto-container .projeto-info {
+    flex: 1;
   }
 
   .projeto-ver {
-    display: flex;
     justify-content: flex-start;
-    
   }
-
-  
 }
