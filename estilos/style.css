@@ -219,8 +219,6 @@ article#video .video-container {
   gap: 20px;
 }
 
-/* ===== PROJETOS (CORRIGIDO) ===== */
-
 #projeto-container .projeto {
   display: flex;
   flex-direction: column;
