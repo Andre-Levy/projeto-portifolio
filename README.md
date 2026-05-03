@@ -10,7 +10,7 @@ Sou um desenvolvedor focado em criar interfaces modernas, responsivas e funciona
 ## 🌐 Acesse o projeto
 
 🔗 **Link do site:**  
-*(https://andre-levy.github.io/projeto-portifolio/)*
+*(https://andre-levy.github.io/projeto-portfolio/)*
 
 ## 🛠️ Tecnologias utilizadas
 
